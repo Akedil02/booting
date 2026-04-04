@@ -1,14 +1,28 @@
 package com.example.booting.util;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 import java.time.LocalDateTime;
 
+@Schema(name = "EventResponse", description = "Event data returned by APIs")
 public class EventResponse {
 
+    @Schema(description = "Event id", example = "1")
     private Long id;
+
+    @Schema(description = "Event title", example = "Spring Boot Workshop")
     private String title;
+
+    @Schema(description = "Organizer email address", example = "organizer@example.com")
     private String organizerEmail;
+
+    @Schema(description = "Ticket price in local currency", example = "99.5")
     private Double ticketPrice;
+
+    @Schema(description = "Long event description", example = "Hands-on workshop covering controllers and JPA.")
     private String description;
+
+    @Schema(description = "Event creation timestamp", example = "2026-04-01T10:15:30")
     private LocalDateTime createdAt;
 
     public EventResponse() {
