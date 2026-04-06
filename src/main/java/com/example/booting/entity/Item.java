@@ -1,6 +1,9 @@
 package com.example.booting.entity;
+import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
 
+
+@Hidden
 @Entity
 public class Item {
 

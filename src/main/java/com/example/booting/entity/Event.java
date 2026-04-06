@@ -1,8 +1,11 @@
 package com.example.booting.entity;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+
+@Hidden
 @Entity
 @Table(name = "events")
 public class Event {
