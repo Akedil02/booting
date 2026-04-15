@@ -2,7 +2,7 @@ package com.example.booting.notification.service;
 
 import com.example.booting.notification.entity.Notification;
 import com.example.booting.notification.repository.NotificationRepository;
-import com.example.booting.DTO.PostCreatedEvent;
+import com.example.booting.post.dto.PostCreatedEvent;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
