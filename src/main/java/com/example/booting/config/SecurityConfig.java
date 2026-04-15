@@ -33,7 +33,7 @@ public class SecurityConfig {
 
         return http
                 .csrf(csrf -> csrf.disable())
-                // JWT 方案不需要服务端 Session
+             
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/login").permitAll()
