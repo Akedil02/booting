@@ -15,11 +15,9 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    // 最小实现：用一个字符串密钥签名 JWT（生产环境请放到安全配置中心）
     @Value("${security.jwt.secret:change-this-secret-key-at-least-32-bytes!}")
     private String jwtSecret;
 
-    // Token 有效期（分钟）
     @Value("${security.jwt.expiration-minutes:120}")
     private long expirationMinutes;
 
@@ -39,9 +37,8 @@ public class JwtService {
         return parseClaims(token).getSubject();
     }
 
-    public boolean isTokenValid(String token, UserDetails userDetails) {
-        String username = extractUsername(token);
-        return username.equals(userDetails.getUsername()) && !isTokenExpired(token);
+    public boolean isTokenValid(String token) {
+        return !isTokenExpired(token);
     }
 
     private boolean isTokenExpired(String token) {
